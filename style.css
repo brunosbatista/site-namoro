@@ -340,6 +340,8 @@ button {
     }
 
     li {
-       width: 90%;
+       display: block;
+       width: 100%;
+       text-align: center;
       }
 }
