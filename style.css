@@ -12,10 +12,8 @@ body {
 }
 .pagina-inicial {
     background-color: #FF1493;
-    width: 100vw;
-    padding-bottom: 0;
-    border-bottom-left-radius: 180px;
-    border-bottom-right-radius: 180px;
+    width: 99vw;
+    
 }
 
 .pagina-inicial img {
@@ -35,24 +33,13 @@ body {
 .title_secundario {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-top: 50px;
     color: #fff;
 }
 
-header{
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    padding-top: 20px;
-}
-header h1{
-    font-size: 70px;
-    font-weight: 800;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: red;
-}
+
 .video-responsive {
     width: 100vw;
     height: auto;
@@ -73,13 +60,13 @@ header h1{
     padding: 15px;
     text-align: center;
     border-radius: 50px;
-    border: 2px solid;
+    border: 1px solid;
     border-color: white;
     margin: 10px;
 }
 
 .linha-tempo_item span {
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 700;
 }
 
@@ -96,8 +83,8 @@ header h1{
 }
 
 .historia_item {
-    width: 90%;
-    height: 300px;
+    width: 70%;
+    min-width: 120px;
     background-color: white;
     margin-top: 50px;
     border-radius: 70px;
@@ -106,14 +93,14 @@ header h1{
 }
 
 .historia_item h1 {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 15px;
     font-weight: 700;
 }
 
 .historia_item p {
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 400;
     text-align: center;
     text-align: justify;
@@ -204,6 +191,8 @@ header h1{
     text-align: center;
     font-size: 50px;
 }
+
+
 
 /* ESTILIZAÇÃO DA SESSÃO DO FORMS*/
 /* Estilo para a seção de palavras */
@@ -330,18 +319,78 @@ button {
 
 
 
-@media (max-width: 768px) {
-    .video-responsive {
+@media  (max-width: 768px) {
+    
+
+    .linha-tempo_item {
         width: 100%;
-        height: auto;
-        max-width: 100%;
+    }
+
+    .historia {
+        padding: 5px;
+    }
+
+    .historia_item {
+        width: 100%;
+    }
+
+    .sobre_nos {
         display: block;
-        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .sobre_nos img {
+        width: 100%;
+        border-bottom-right-radius: 0px;
+        margin-bottom: -4px;
+    }
+
+    .sobre_nos_item h1 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .title_secundario {
+        font-size: 20px;
+    }
+
+    section.palavras {
+        width: 100%;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .campo-input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    input#palavra-momento {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
     }
 
     li {
-       display: block;
-       width: 100%;
-       text-align: center;
-      }
+        width: 100%;
+        margin: 5px;
+    }
+
+    .historia_resumo {
+        padding: 15px;
+    }
+
+    .historia_resumo p {
+        font-size: 15px;
+    }
+
+    .mensagens h1 {
+        font-size: 30px;
+    }
+
 }
