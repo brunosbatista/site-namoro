@@ -1,38 +1,42 @@
+window.addEventListener("load", function() {
+    GetPalavra();
+});
 
 
 document.getElementById("form_palavra").addEventListener("submit", function(event) {
     event.preventDefault();
 
     let palavra = document.getElementById('palavra-momento').value;
-    let listPalavra = document.getElementsByClassName('palavras-item')[0];
-
-    // Criar um novo elemento <li> com a palavra e adicioná-lo à lista
-    let novoItem = document.createElement('li');
-    novoItem.textContent = palavra;
-    listPalavra.appendChild(novoItem);
-
-    console.log(listPalavra.innerHTML);
+   
+    body = {
+        'palavra': palavra
+    }
+    PostPalavra(body);
   });
 
-function PostPalavra(data) {
-    alert(data)
-    fetch('', {
+ function PostPalavra(palavra) {
+     fetch('http://localhost:3000/palavras', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(palavra)
     })
    .then(responde => responde.json())
    .then(res => {
-        alert('Palavra adicionada a sua lista')
+        GetPalavra()
+       
    })
+
+   
 }
 
-function GetPalavra() {
-    fetch('')
+async function GetPalavra() {
+    await fetch('http://localhost:3000/palavras')
     .then(responde => responde.json())
     .then(res => {
-        
+        let listPalavra = document.getElementsByClassName('palavras-item')[0];
+        listPalavra.innerHTML = res.map(p => `<li>${p.palavra}</li>`).join('');
     })
+    .catch(error => console.error('Erro ao buscar palavras:', error));
 }
