@@ -5,14 +5,47 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url('/assets/background.avif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    margin: 0;
+    padding: 0;
 }
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;  /* Coloquei um valor negativo para ficar abaixo do conteúdo */
+}
+
+#content {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza no eixo vertical */
+    align-items: center; /* centraliza no eixo horizontal */
+    height: 100vh; /* ajusta a altura para ocupar toda a tela */
+}
+
+#content h1 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+#content p {
+    font-size: 20px;
+    margin-bottom: 200px;
+}
+
+
 .pagina-inicial {
+    margin-top: 100vh;  /* Ajuste conforme necessário para dar espaço para o vídeo */
     background-color: #FF1493;
-    width: 99vw;
     
 }
 
@@ -39,14 +72,14 @@ body {
     color: #fff;
 }
 
-
+/*
 .video-responsive {
     width: 100vw;
     height: auto;
     max-width: 100%;
     display: block;
     margin: 0 auto;
-}
+}*/
 
 .linha-tempo {
     margin-top: 50px;
@@ -117,6 +150,7 @@ body {
     border-radius: 70px;
     text-align: center;
     padding: 30px;
+    background-color: #fff;
 }
 
 .historia_resumo h1 {
@@ -316,6 +350,7 @@ button {
     margin: 3px;
   }
 
+ 
 
 
 
