@@ -9,13 +9,13 @@ document.getElementById("form_palavra").addEventListener("submit", function(even
     let palavra = document.getElementById('palavra-momento').value;
    
     body = {
-        'palavra': palavra
+        'nome': palavra
     }
     PostPalavra(body);
   });
 
  function PostPalavra(palavra) {
-     fetch('http://localhost:3000/palavras', {
+     fetch('http://localhost:3000/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -32,11 +32,11 @@ document.getElementById("form_palavra").addEventListener("submit", function(even
 }
 
 async function GetPalavra() {
-    await fetch('http://localhost:3000/palavras')
+    await fetch('http://localhost:3000')
     .then(responde => responde.json())
     .then(res => {
         let listPalavra = document.getElementsByClassName('palavras-item')[0];
-        listPalavra.innerHTML = res.map(p => `<li>${p.palavra}</li>`).join('');
+        listPalavra.innerHTML = res.map(p => `<li>${p.nome}</li>`).join('');
     })
     .catch(error => console.error('Erro ao buscar palavras:', error));
 }
