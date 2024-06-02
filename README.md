@@ -37,12 +37,12 @@ Para visualizar o site localmente, siga os passos abaixo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seuusername/repo-de-comemoracao.git
+   git clone https://github.com/brunosbatista/site-namoro.git
    ```
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd repo-de-comemoracao
+   cd site-namoro
    ```
 
 3. Abra o arquivo `index.html` no seu navegador preferido.
