@@ -1,4 +1,3 @@
-Claro! Aqui está um exemplo de um README.md para o seu repositório GitHub:
 
 ---
 
@@ -22,13 +21,15 @@ O objetivo deste projeto foi criar uma página simples e elegante para celebrar 
 /
 ├── index.html
 ├── style.css
+├── script.js
 └── assets/
     ├── images/
 ```
 
 - `index.html`: Arquivo principal do site.
-- `styles/style.css`: Arquivo CSS contendo os estilos do site.
-- `assets/`: Diretório contendo imagens e fontes utilizadas no site.
+- `style.css`: Arquivo CSS contendo os estilos do site.
+- `script.js`: Arquivo JS contendo todo o script do site.
+- `assets/`: Diretório contendo imagens utilizadas no site.
 
 ## 🚀 Como Usar
 
